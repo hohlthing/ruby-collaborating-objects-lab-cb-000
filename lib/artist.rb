@@ -9,5 +9,4 @@ class Artist
     @songs = []
   end
 
-  def
 end
