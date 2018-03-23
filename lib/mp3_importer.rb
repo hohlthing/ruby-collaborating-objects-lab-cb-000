@@ -7,7 +7,7 @@ class MP3Importer
   end
 
   def files
-    @files = Dir.glob("#{@path}/*.mp3")
+    @files = Dir.entries(@path).select { |x| x.include?('.mp3')}
   end
 
   def import
