@@ -6,7 +6,7 @@ attr_accessor :name, :artist
     @name = name
   end
 
-  def self.new_from_filename(filename)
+  def self.new_by_filename(filename)
     array = filename.split(" - ")
     artist = array[0]
     name = array[1].gsub('.mp3','')
