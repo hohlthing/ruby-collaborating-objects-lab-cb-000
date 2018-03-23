@@ -9,9 +9,9 @@ attr_accessor :name, :artist
   def self.new_by_filename(filename)
     array = filename.split(" - ")
     artist = array[0]
-    name = array[1].gsub('.mp3','')
-    song = self.new(name)
-    song.artist = artist
+    song_name = array[1].gsub('.mp3','')
+    song = self.new(song_name)
+    song.artist = Artist.new(artist)
     song
   end
 
